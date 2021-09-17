@@ -24,15 +24,16 @@
 
 ## How to use Angular
 
-The first thing the user will see when they open up the main page is the `user.json` message that says
-"and hi there, tom tom". This is being displayed by the code below!
-
+The code below gives the user access to the main controller along with links to get to my repo.
 ```
-app.get('/user', function (req, res) {
-
-    res.sendFile('/user.json', { root: __dirname });
-
-});
+<body ng-app="My-Angular">
+    <div class="container-fluid" ng-controller="MainController">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <a href="https://github.com/Hammyzack/Lab-Charlie" target="_blank">link to my repo</a><br>
+                <a href="https://github.com/Hammyzack/Lab-Charlie/blob/main/README.md" target="_blank">Writing a file to a server instructions</a>              
+            </div>
+        </div>
 ```
 
 The user then will see the **html** that was created that will display **My-Angular** with my name. It will also ask them if they are lost or confused. Then it continues by giving them `URL Links` to help them get to where they need to be. Below is the code that displays the main page for the html.
